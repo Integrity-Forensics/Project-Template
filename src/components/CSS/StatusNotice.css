@@ -1,0 +1,82 @@
+/* ==============================================
+ * STATUS NOTICE
+ * ============================================== */
+
+.status-notice {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(100% - 32px, 320px);
+  padding: 10px 12px;
+  border-radius: 10px;
+  border-left: 2px solid transparent;
+  box-shadow: 0 12px 28px var(--root-shadow);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition:
+    background 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.status-notice:hover {
+  transform: scale(1.02);
+}
+
+.status-notice svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.status-notice p {
+  margin: 0;
+}
+
+/* ==============================================
+ * TYPES
+ * ============================================== */
+
+.status-notice-success {
+  background: var(--root-status-success-bg);
+  border-left-color: var(--root-green);
+  color: var(--root-status-success-text);
+}
+
+.status-notice-success:hover {
+  background: var(--root-status-success-bg-hover);
+}
+
+.status-notice-information {
+  background: var(--root-status-info-bg);
+  border-left-color: var(--root-blue);
+  color: var(--root-status-info-text);
+}
+
+.status-notice-information:hover {
+  background: var(--root-status-info-bg-hover);
+}
+
+.status-notice-warn {
+  background: var(--root-status-warn-bg);
+  border-left-color: var(--root-warning);
+  color: var(--root-status-warn-text);
+}
+
+.status-notice-warn:hover {
+  background: var(--root-status-warn-bg-hover);
+}
+
+.status-notice-error {
+  background: var(--root-status-error-bg);
+  border-left-color: var(--root-red);
+  color: var(--root-status-error-text);
+}
+
+.status-notice-error:hover {
+  background: var(--root-status-error-bg-hover);
+}

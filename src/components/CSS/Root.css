@@ -1,0 +1,117 @@
+/* ==============================================
+ * ROOT COLORS
+ * ============================================== */
+
+:root {
+  /* Light and dark */
+  --root-white: #f5f6f8;
+  --root-white-20: rgba(245, 246, 248, 0.2);
+  --root-black: #0b0c0f;
+  --root-background: #101114;
+  --root-surface: #181a20;
+  --root-surface-hover: #22252d;
+
+  /* Text */
+  --root-text: #f3f4f6;
+  --root-text-muted: #9ca3af;
+
+  /* Borders and shadows */
+  --root-border: rgba(255, 255, 255, 0.08);
+  --root-shadow: rgba(0, 0, 0, 0.28);
+
+  /* Information Cards */
+  --root-blue: #4c8dff;
+  --root-green: #3dbe7a;
+  --root-warning: #e8b931;
+  --root-red: #e5484d;
+
+  --root-blue-soft: rgba(76, 141, 255, 0.14);
+  --root-green-soft: rgba(61, 190, 122, 0.14);
+  --root-warning-soft: rgba(232, 185, 49, 0.16);
+  --root-red-soft: rgba(229, 72, 77, 0.14);
+
+  /* Status notices */
+  --root-status-success-bg: color-mix(in srgb, var(--root-green) 16%, var(--root-surface));
+  --root-status-success-bg-hover: color-mix(in srgb, var(--root-green) 24%, var(--root-surface));
+  --root-status-success-text: color-mix(in srgb, var(--root-green) 35%, var(--root-white));
+
+  --root-status-info-bg: color-mix(in srgb, var(--root-blue) 16%, var(--root-surface));
+  --root-status-info-bg-hover: color-mix(in srgb, var(--root-blue) 24%, var(--root-surface));
+  --root-status-info-text: color-mix(in srgb, var(--root-blue) 35%, var(--root-white));
+
+  --root-status-warn-bg: color-mix(in srgb, var(--root-warning) 16%, var(--root-surface));
+  --root-status-warn-bg-hover: color-mix(in srgb, var(--root-warning) 24%, var(--root-surface));
+  --root-status-warn-text: color-mix(in srgb, var(--root-warning) 35%, var(--root-white));
+
+  --root-status-error-bg: color-mix(in srgb, var(--root-red) 16%, var(--root-surface));
+  --root-status-error-bg-hover: color-mix(in srgb, var(--root-red) 24%, var(--root-surface));
+  --root-status-error-text: color-mix(in srgb, var(--root-red) 35%, var(--root-white));
+
+  /* Masks */
+  --root-mask-black: #000;
+
+  /* Type and chrome */
+  --root-font: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --title-bar-height: 52px;
+}
+
+/* ==============================================
+ * BASE
+ * ============================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  color: var(--root-text);
+  background: var(--root-background);
+  font-family: var(--root-font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  color: var(--root-white);
+  background: var(--root-blue);
+}
+
+/* ==============================================
+ * APP SHELL
+ * ============================================== */
+
+.app-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--root-background);
+  color: var(--root-text);
+}
+
+.app-content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  padding: 32px;
+}

@@ -1,0 +1,10 @@
+{
+  "brand-url": "https://api.integrityforensics.net",
+  "app-name": "Project Template",
+  "platforms-menu": true,
+  "platforms": {
+    "Minecraft": true,
+    "Roblox": true,
+    "FiveM": true
+  }
+}

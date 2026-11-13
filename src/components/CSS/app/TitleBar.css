@@ -1,0 +1,140 @@
+/* ==============================================
+ * TITLE BAR
+ * ============================================== */
+
+.title-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--title-bar-height);
+  padding: 0 10px 0 16px;
+  border-bottom: 1px solid var(--root-border);
+  background: color-mix(in srgb, var(--root-surface) 42%, var(--root-background));
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.title-bar-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  max-width: 36%;
+}
+
+.title-bar-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.title-bar-label {
+  overflow: hidden;
+  color: var(--root-text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.title-bar-app {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  max-width: 42%;
+  color: var(--root-text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+/* ==============================================
+ * WINDOW CONTROLS
+ * ============================================== */
+
+.title-bar-controls {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.title-bar-button::before,
+.title-bar-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 12px;
+  height: 1px;
+  margin-top: -0.5px;
+  border-radius: 1px;
+  background: var(--root-text-muted);
+}
+
+.title-bar-button-close::before,
+.title-bar-button-close::after {
+  content: none;
+}
+
+.title-bar-button-close svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  shape-rendering: geometricPrecision;
+}
+
+.title-bar-button-close svg path {
+  fill: none;
+  stroke: var(--root-text-muted);
+  stroke-width: 1.5;
+  stroke-linecap: square;
+}
+
+.title-bar-button:hover {
+  background: var(--root-surface-hover);
+}
+
+.title-bar-button:hover::before,
+.title-bar-button:hover::after {
+  background: var(--root-white);
+}
+
+.title-bar-button-close:hover svg path {
+  stroke: var(--root-white);
+}
+
+.title-bar-button:focus-visible {
+  outline: 1px solid var(--root-blue);
+  outline-offset: 1px;
+}
+
+.title-bar-button-close:hover {
+  background: var(--root-red);
+}
